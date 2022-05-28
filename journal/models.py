@@ -7,10 +7,10 @@ class Tag(models.Model):
         return self.name
 
 class Entry(models.Model):
-    date = models.DateField()
-    tags = models.ManyToManyField(Tag)
+    date = models.DateField(unique=True)
+    tags = models.ManyToManyField(Tag, blank=True)
     content = models.TextField()
-    public = models.BooleanField()
+    public = models.BooleanField(default=True)
 
     def __str__(self):
         return str(self.date)
