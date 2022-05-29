@@ -16,7 +16,9 @@
 		<br />
 		{% endif %}
 		{% for tag in entry.tags.all %}
-		<span class="badge bg-secondary">{{tag.name}}</span>
+		<a href="{% url 'tag' tag.name %}">
+			<span class="badge bg-secondary">{{tag.name}}</span>
+		</a>
 		{% endfor %}
 	    </h6>
 	    <p class="card-text"}>{{entry.content | linebreaks}}</p>
