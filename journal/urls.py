@@ -3,6 +3,6 @@ from .views import indexPageView, entryPageView
 
 urlpatterns = [
     path("", indexPageView, name="index"),
-    path("entry/<str:date>/", entryPageView, name="entry"),
+    path("entries/<str:date>/", entryPageView, name="entry"),
 ]                  
 
