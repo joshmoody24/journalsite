@@ -3,7 +3,7 @@ from .models import *
 
 
 class EntryAdmin(admin.ModelAdmin):
-    fields = ('date', 'content', 'tags', 'public')
+    fields = ('date', 'title', 'content', 'tags', 'public')
     ordering = ('-date',)
 
 # Register your models here.

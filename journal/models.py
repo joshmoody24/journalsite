@@ -9,6 +9,7 @@ class Tag(models.Model):
 class Entry(models.Model):
     date = models.DateField(unique=True)
     tags = models.ManyToManyField(Tag, blank=True)
+    title = models.CharField(max_length=200, blank=True, null=True)
     content = models.TextField()
     public = models.BooleanField(default=True)
 

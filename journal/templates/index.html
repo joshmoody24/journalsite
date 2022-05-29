@@ -6,6 +6,10 @@
 	  <div class="card-body">
 		  <h5 class="card-title"><a class="text-decoration-none text-dark" href="/entry/{{entry.date | date:"Y-m-d"}}">{{entry.date}}</a></h5>
 	    <h6 class="card-subtitle mb-2 text-muted">
+		{% if entry.title %}
+		{{entry.title}}
+		<br />
+		{% endif %}
 		{% for tag in entry.tags.all %}
 		<span class="badge bg-secondary">{{tag.name}}</span>
 		{% endfor %}
