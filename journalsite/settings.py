@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,6 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CSRF_TRUSTED_ORIGINS = ['http://journal.joshmoody.org', 'http://127.0.0.1']
+ALLOWED_HOSTS = [
+    'journal.joshmoody.org',
+    '127.0.0.1'
+]
+CORS_ORIGIN_WHITELIST = [
+    'http://journal.joshmoody.org:8001',
+    'http://127.0.0.1'
+]
 
 # Application definition
 
@@ -119,7 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
