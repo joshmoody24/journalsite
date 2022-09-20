@@ -27,14 +27,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = ['http://journal.joshmoody.org', 'http://127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['http://localhost', 'http://journal.joshmoody.org', 'http://127.0.0.1']
 ALLOWED_HOSTS = [
     'journal.joshmoody.org',
-    '127.0.0.1'
+    '127.0.0.1',
+    'localhost'
 ]
 CORS_ORIGIN_WHITELIST = [
     'http://journal.joshmoody.org:8001',
-    'http://127.0.0.1'
+    'http://127.0.0.1',
+    'http://localhost'
 ]
 
 # Application definition
